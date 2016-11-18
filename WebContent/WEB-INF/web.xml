@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>WebLogin</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ServletLogin</display-name>
+    <servlet-name>ServletLogin</servlet-name>
+    <servlet-class>cn.bjfu.im.ServletLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLogin</servlet-name>
+    <url-pattern>/login.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletReg</display-name>
+    <servlet-name>ServletReg</servlet-name>
+    <servlet-class>cn.bjfu.im.ServletReg</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletReg</servlet-name>
+    <url-pattern>/reg.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletLogoff</display-name>
+    <servlet-name>ServletLogoff</servlet-name>
+    <servlet-class>cn.bjfu.im.ServletLogoff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletLogoff</servlet-name>
+    <url-pattern>/logoff.do</url-pattern>
+  </servlet-mapping>
+</web-app>
