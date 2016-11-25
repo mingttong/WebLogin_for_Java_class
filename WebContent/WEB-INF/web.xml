@@ -39,4 +39,14 @@
     <servlet-name>ServletLogoff</servlet-name>
     <url-pattern>/logoff.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletQueryUser</display-name>
+    <servlet-name>ServletQueryUser</servlet-name>
+    <servlet-class>cn.bjfu.im.ServletQueryUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletQueryUser</servlet-name>
+    <url-pattern>/queryUser.do</url-pattern>
+  </servlet-mapping>
 </web-app>
