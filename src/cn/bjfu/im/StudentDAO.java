@@ -19,7 +19,7 @@ public class StudentDAO extends BaseDAO {
 		boolean f = false;
 		String usr = vo.getUsr(), pwd = vo.getPwd();
 
-		if (! checkExist(vo.getUsr())) {
+		if (! checkExist(usr)) {
 			Connection conn = getConn();
 			String sql = "insert into studentInfo (usr, pwd) values (?, ?)";
 

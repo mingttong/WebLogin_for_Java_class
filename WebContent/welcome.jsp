@@ -9,9 +9,10 @@
 <body>
 <%
 HttpSession se = request.getSession();
+Object loginMsg = se.getAttribute("LOGIN_RES");
 %>
 
-<h1>Welcome!&nbsp;<%=se.getAttribute("logged")%></h1>
+<h1>Welcome!&nbsp;<%=loginMsg%></h1>
 
 <a href="login.html"><button>返回登录页面</button></a>
 

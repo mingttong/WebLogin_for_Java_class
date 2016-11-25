@@ -18,7 +18,7 @@ public class ServletLogin extends HttpServlet {
 	 * 
 	 * @type String
 	 */
-	private String loginKey = "logged";
+	private String loginKey = "LOGIN_RES";
 
 	public String getLoginKey() {
 		return loginKey;
@@ -111,13 +111,13 @@ public class ServletLogin extends HttpServlet {
 	/*
 	 * 在session中保存用户登录的信息
 	 * 
-	 * @method saveInSession
+	 * @function saveInSession
 	 * 
 	 * @param {String} 存储的key值
 	 * 
 	 * @param {String} 存储的session值
 	 */
-	public void saveInSession(HttpServletRequest request, String key,
+	public static void saveInSession(HttpServletRequest request, String key,
 			String valueVO) {
 
 		HttpSession session = request.getSession();

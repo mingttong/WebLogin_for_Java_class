@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class ServletReg extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,14 +38,22 @@ public class ServletReg extends HttpServlet {
 		if (f) {
 			System.out.println("注册成功！");
 			
-			// 跳转页面
-			RequestDispatcher rd = request.getRequestDispatcher("login.html");
+			// 在session中存储登录信息
+			HttpSession session = request.getSession();
+			session.setAttribute("LOGIN_RES", usr);
+			
+			// 跳转至welcome.jsp并显示提示
+			RequestDispatcher rd = request.getRequestDispatcher("welcome.jsp");
 	    	rd.forward(request, response);
 		} else {
 			System.out.println("注册失败！");
 			
-			// 跳转页面
-			RequestDispatcher rd = request.getRequestDispatcher("login.html");
+			// 在session中存储注册提示信息
+			HttpSession session = request.getSession();
+			session.setAttribute("REG_RES", "该用户名已经注册了！");
+			
+			// 跳转至reg.jsp并显示提示
+			RequestDispatcher rd = request.getRequestDispatcher("reg.jsp");
 	    	rd.forward(request, response);
 		}
 		
